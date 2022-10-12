@@ -3,6 +3,8 @@
     Ryan Dunn, 10 Oct 2022
 
     Expanded upon Jeff's code. 
+
+    Original Data obtained from https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
 '''
 import csv
 
