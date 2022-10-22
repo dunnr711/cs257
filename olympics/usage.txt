@@ -11,13 +11,17 @@ SYNOPSIS
     python3 olympics.py -n
     python3 olympics.py --noc
 
+    python3 olympsics.py -y
+    python3 olympics.py --year
+
     python3 olympics.py -h
     python3 olympics.py --help
+
 
 DESCRIPTION
 
 	-a , --athletes 
-		prints a list of athletes names from a  given NOC which is inputed as a string. If no string is given, defaults to printing all athletes. 
+		prints a list of athletes names from a given NOC abbreviation which is inputed as a string. If no string is given, defaults to printing all athletes. 
     -y, --year 
         Lists athletes that competed during the year along with the season that they participated in.  
 	-n, --noc

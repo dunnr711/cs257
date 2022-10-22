@@ -136,39 +136,40 @@ def get_noc():
 
     connection.close()
     return noc
-    
+
 def get_help():
     with open('usage.txt', 'r') as f:
         lines = f.readlines()
     return lines
+
 def main():
-    request = read_request()
-    if request == "-a":
+    user_request = read_request()
+    if user_request == "-a":
         athletes = get_athletes(sys.argv[-1])
         print(f'Athletes from {sys.argv[-1]}:')
         for athlete in athletes: 
             print(athlete)
-    elif request == "-A":
+    elif user_request == "-A":
         athletes = get_all_athletes()
         for athlete in athletes: 
             print(athlete)
-    elif request == "-n":
+    elif user_request == "-n":
         noc_list = get_noc()
         for item in noc_list:
             print(item)
-    elif request == "-y":
+    elif user_request == "-y":
         athletes = get_athletes_from_year(sys.argv[-1])
         print("Athletes from " + sys.argv[-1])
         for athlete in athletes: 
             print(athlete)
-    elif request == "-e":
+    elif user_request == "-e":
         print("You have too many command arguments. Type \"python3 olympics.py --help\" for valid commands.")
-    elif request == "-E":
+    elif user_request == "-E":
         print("You have too few command arguments. Type \"python3 olympics.py --help\" for valid commands.")
-    elif request == "-h":
+    elif user_request == "-h":
         for line in get_help():
             print(line)
-    elif request == "incorrect command":
+    elif user_request == "incorrect command":
         print("Did you enter the correct command? Need help? Type \"python3 olympics.py --help\" for valid commands. ")
     else:
         print("This should never happen.")
