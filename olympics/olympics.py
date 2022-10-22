@@ -86,7 +86,6 @@ def get_all_athletes():
     connection.close()
     return athletes
 
-
 def get_athletes_from_year(year):
     year = str(year)
     ''' Returns a list of the full names of all athletes who competed in the given year '''
@@ -137,6 +136,7 @@ def get_noc():
 
     connection.close()
     return noc
+    
 def get_help():
     with open('usage.txt', 'r') as f:
         lines = f.readlines()
