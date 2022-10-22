@@ -27,3 +27,16 @@ AND nocs.id = linked_master.nocs_id
 AND medals.medal = 'Gold'
 GROUP BY nocs.country
 ORDER BY COUNT(medals.id) DESC;
+
+SELECT athletes.first_name, athletes.last_name, nocs.abbreviation
+FROM athletes, nocs, linked_master
+WHERE athletes.id = linked_master.athlete_id
+AND nocs.id = linked_master.nocs_id
+AND nocs.abbreviation = 'CHN';
+
+SELECT athletes.first_name, athletes.last_name, olympic_games.year, olympic_games.season
+FROM athletes, olympic_games, linked_master
+WHERE olympic_games.id = linked_master.olympic_games
+AND athletes.id = linked_master.athlete_id
+AND olympic_games.year = '2010'
+ORDER BY athlete.last_name;

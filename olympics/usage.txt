@@ -1,0 +1,28 @@
+Ryan Dunn usage.txt
+10-21-22
+
+NAME
+books - search through book files
+
+SYNOPSIS
+    python3 olympics.py -a <String>
+    python3 olympics.py --athletes <String>
+
+    python3 olympics.py -n
+    python3 olympics.py --noc
+
+    python3 olympics.py -h
+    python3 olympics.py --help
+
+DESCRIPTION
+
+	-a , --athletes 
+		prints a list of athletes names from a  given NOC which is inputed as a string. If no string is given, defaults to printing all athletes. 
+    -y, --year 
+        Lists athletes that competed during the year along with the season that they participated in.  
+	-n, --noc
+        List all the NOCs and the number of gold medals they have won, in decreasing order of the number of gold medals.
+	-h, --help
+		gives a list of commands you can use with our program. 
+
+
